@@ -6,7 +6,7 @@ class Wrapper:
 
     def request_data(self, path, params):
         response = requests.get(self.url + path, params = params)
-        return response
+        return response.content
 
 class Breeders(Wrapper):
     def __init__ (self, breeders, show_strains = False):
